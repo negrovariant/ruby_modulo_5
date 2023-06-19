@@ -198,6 +198,41 @@ controlador : welcome  metodo: index
 * en el navbar, para que tome el estilo se le da la clase que corresponde a bootstrap
  ej:class:'navbar-brand'
 
-*  
+*  con esta formula tenemos hora
+<b><%= Time.now() %></b>
 
 
+* para poder agregar con codigo ruby una imagen. todo lenguaje ruby comienza con <%=info dentro%>
+<%=image_tag("ImagenDeApoyo.jpg", size:"300x200", alt: "Edit Entry")%>
+
+* Scaffold.
+rails g scaffold libro nombre descripcion
+ invoke  active_record
+      create    db/migrate/20230619195022_create_libros.rb
+      create    app/models/libro.rb
+      invoke    test_unit
+      create      test/models/libro_test.rb
+      create      test/fixtures/libros.yml
+      invoke  resource_route
+       route    resources :libros
+      invoke  scaffold_controller
+      create    app/controllers/libros_controller.rb
+      invoke    erb
+      create      app/views/libros
+      create      app/views/libros/index.html.erb
+      create      app/views/libros/edit.html.erb
+      create      app/views/libros/show.html.erb
+      create      app/views/libros/new.html.erb
+      create      app/views/libros/_form.html.erb
+      create      app/views/libros/_libro.html.erb
+      invoke    resource_route
+      invoke    test_unit
+      create      test/controllers/libros_controller_test.rb
+      create      test/system/libros_test.rb
+      invoke    helper
+      create      app/helpers/libros_helper.rb
+      invoke      test_unit
+      invoke    jbuilder
+      create      app/views/libros/index.json.jbuilder
+      create      app/views/libros/show.json.jbuilder
+      create      app/views/libros/_libro.json.jbuilder
