@@ -127,4 +127,22 @@ modifcamos en routes (descomentar)
        cambiamos articles por welcome
  esto genera que la pagina DE inicio sea welcome
  .........................
+
+* agregan en application.js
+import "popper"
+import "bootstrap"
+
  
+
+* agregar en la siguiente ruta 
+config/initializers/assets.rb
+Rails.application.config.assets.precompile += %w(application.scss bootstrap.min.js popper.js)
+
+* agregar en config/importmap.rb
+pin "popper", to: 'popper.js' preload:true
+pin "bootstrap", to: 'bootstrap.min.js', preload: true
+
+* agregar en config/view/layouts/application.html.erb
+<%= javascript_importmap_tags %>
+
+
