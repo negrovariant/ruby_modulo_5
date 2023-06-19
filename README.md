@@ -145,4 +145,38 @@ pin "bootstrap", to: 'bootstrap.min.js', preload: true
 * agregar en config/view/layouts/application.html.erb
 <%= javascript_importmap_tags %>
 
+* crear una carpeta en view, con el nombre de shared. dentro de la misma, crear un html 
+_navbar.html
+luego de guardarlo, cambiamos a extension del mismo a .erb
+
+* poner en application.html.erb el yield dentro de un div
+<div class="container">
+    <%= yield %>
+    </div>
+
+
+*  dentro del body en application.html.erb inyectamos el navbar con la ruta y render.
+<%= render 'shared/navbar' %>    
+
+* welcome es un metodo dentro del controlador y es una pagina llamada index.html.erb
+controlador : welcome  metodo: index
+        routes
+        controller/metodo
+    
+        https://;localhost:3000/welcome/index
+                           .                              .welcome_controller
+                            .                            . index.
+                             .                          .        .
+                              .routes controller/metodo.          .
+                                                                   .
+                                                                    .
+                                                         views/welcome index.html.erb
+                    
+ 
+
+
+
+
+* 
+
 
