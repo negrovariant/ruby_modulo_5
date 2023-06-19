@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :libros
   get 'phantom/index'
   get 'phantom/generic'
   get 'phantom/elements'
