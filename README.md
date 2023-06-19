@@ -141,9 +141,24 @@ Rails.application.config.assets.precompile += %w(application.scss bootstrap.min.
 * agregar en config/importmap.rb
 pin "popper", to: 'popper.js' preload:true
 pin "bootstrap", to: 'bootstrap.min.js', preload: true
+***esto puede generar un error.. revisar bien si es necesario.
 
 * agregar en config/view/layouts/application.html.erb
 <%= javascript_importmap_tags %>
+
+* ****creamos un controlador con nuestro nombre*******
+
+1.- class SixtoController < ApplicationController
+    def mostrar
+    end
+2.-luego en view, creamos la carpeta del controlador, y dentro, un html.erb con el metodo
+mostrar.html.erb esto es un html, por lo que podemos poner dentro lo que queramos. 
+ 
+3.- creamos la ruta en routes.rb como lo hicimos con welcome e index.
+get "sixto/mostrar"
+
+get "sixto", to: "sixto#mostrar"
+
 
 * crear una carpeta en view, con el nombre de shared. dentro de la misma, crear un html 
 _navbar.html
@@ -173,10 +188,16 @@ controlador : welcome  metodo: index
                                                          views/welcome index.html.erb
                     
  
+* asd es para revisar todas las rutas
 
+*  ejemplo de uso del helper link_to
+      <a class="navbar-brand" href="#">Sistema Web</a>
+  esto es un Ancor, solo que se escribe de manera distinta.
+  
 
+* en el navbar, para que tome el estilo se le da la clase que corresponde a bootstrap
+ ej:class:'navbar-brand'
 
-
-* 
+*  
 
 
